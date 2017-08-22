@@ -7,7 +7,5 @@
  * Author:  Menja
  * Created: 21-08-2017
  */
-
-use jpabasic_firstday
-INSERT INTO book (ID, TITLE, PRICE) VALUES (0, "FoodStuff", 456.55);
-
+drop database jpabasicsql_firstday;
+create database jpabasicsql_firstday;

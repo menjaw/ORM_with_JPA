@@ -21,6 +21,7 @@ public class CreateTable {
     public static void main(String[] args) {
         schemaBuilder();
         runEMF();
+        insertBooks();
     }
 
     //METHODS
@@ -34,9 +35,9 @@ public class CreateTable {
 
     public static void insertBooks() {
         EntityManager em = emf.createEntityManager();
-        Book book1 = new Book(0, "Title of book", 123.87);
-        Book book2 = new Book(0, "Title of Street", 987.87);
-        Book book3 = new Book(0, "Title of book", 123.87);
+        Book book1 = new Book(0, 123.83, "Title of book");
+        Book book2 = new Book(0, 987.81, "Title of Street");
+        Book book3 = new Book(0, 183.04, "Title of book");
         em.getTransaction().begin();
         em.persist(book2);
         em.getTransaction().commit();

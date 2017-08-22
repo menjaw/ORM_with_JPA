@@ -9,3 +9,7 @@
  */
 drop database jpabasic_firstday;
 create database jpabasic_firstday;
+
+
+use jpabasic_firstday
+INSERT INTO book (ID, PRICE, TITLE) VALUES (0, 456.55 , "FoodStuff");

@@ -4,13 +4,11 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entity.Book</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpabasic_firstday?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpabasicsql_firstday?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="menja"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="menja"/>
-      <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-      <property name="javax.persistence.sql-load-script-source" value="scripts/data.sql"/>
     </properties>
   </persistence-unit>
 </persistence>

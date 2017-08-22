@@ -18,32 +18,25 @@ import javax.persistence.Id;
 @Entity
 public class Book implements Serializable {
 
-    //Constructors
     public Book() {
     }
 
-    public Book(int Id, String title) {
-        this.Id = Id;
+    public Book(Long id, String title) {
+        this.id = id;
         this.title = title;
     }
 
-    public Book(int Id, double price, String title) {
-        this.Id = Id;
-        this.price = price;
-        this.title = title;
-    }
-
-    //Variables
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int Id;
+    private Long id;
 
-    public int getId() {
-        return Id;
+    public Long getId() {
+        return id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     String title;
@@ -56,14 +49,9 @@ public class Book implements Serializable {
         this.title = title;
     }
 
-    double price;
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+    @Override
+    public String toString() {
+        return "Entity.Book[ id=" + id + " ]";
     }
 
 }
