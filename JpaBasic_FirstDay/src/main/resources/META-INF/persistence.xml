@@ -10,7 +10,7 @@
       <property name="javax.persistence.jdbc.password" value="menja"/>
       <property name="eclipselink.logging.level.sql" value="FINE"/>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-      <property name="javax.persistence.sql-load-script-source" value="scripts/data.sql"/>
+      <property name="javax.persistence.sql-load-script-source" value="scripts/Data.sql"/>
     </properties>
   </persistence-unit>
 </persistence>
