@@ -6,6 +6,8 @@
 package main;
 
 import entity.Book;
+import entity.Customer;
+import enums.CustomerType;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -22,9 +24,12 @@ public class CreateTable {
         schemaBuilder();
         runEMF();
         insertBooks();
+        insertCustomerAndType();
     }
 
-    //METHODS
+    
+    
+    /*-----METHODS-----*/
     public static void schemaBuilder() {
         Persistence.generateSchema("pu", null);
     }
@@ -47,5 +52,27 @@ public class CreateTable {
         em.getTransaction().begin();
         em.persist(book3);
         em.getTransaction().commit();
+    }
+
+    public static void insertCustomerAndType() {
+        EntityManager em = emf.createEntityManager();
+
+        Customer customer = new Customer(0L, "FirstName", "LastName");
+        customer.setCustomerType(CustomerType.GOLD);
+        
+        em.getTransaction().begin();
+        em.persist(customer);
+        em.getTransaction().commit();
+        em.close();
+    }
+    
+    public static void addHobby(String s){
+        Customer customer = new Customer();   
+        
+        
+    }
+    
+    public static void getHobby(){
+    
     }
 }
