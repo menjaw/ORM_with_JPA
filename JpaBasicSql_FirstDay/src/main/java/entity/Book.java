@@ -21,7 +21,7 @@ public class Book implements Serializable {
     public Book() {
     }
 
-    public Book(Long id, String title) {
+    public Book(int id, String title) {
         this.id = id;
         this.title = title;
     }
@@ -29,13 +29,13 @@ public class Book implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

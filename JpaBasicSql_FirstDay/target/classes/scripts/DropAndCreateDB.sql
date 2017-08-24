@@ -7,5 +7,5 @@
  * Author:  Menja
  * Created: 21-08-2017
  */
-drop database jpabasicsql_firstday;
-create database jpabasicsql_firstday;
+-- drop database jpabasicsql_firstday;
+-- create database jpabasicsql_firstday;
