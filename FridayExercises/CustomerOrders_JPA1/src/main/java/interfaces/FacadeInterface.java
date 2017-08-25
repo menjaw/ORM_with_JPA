@@ -25,7 +25,7 @@ public interface FacadeInterface {
     public List<Customer> getCustomers();
 
     //Create an Order 
-    public Order createOrder();
+    public Order createOrder(Order order);
 
     //Add an Order to a Customer
     public Order addOrderToCustomer();

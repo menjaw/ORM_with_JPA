@@ -76,11 +76,19 @@ public class Facade implements FacadeInterface {
         }
     }
 
- 
-
     @Override
-    public Order createOrder() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Order createOrder(Order order) {
+        EntityManager em = emf.createEntityManager();
+
+        Order order1 = new Order(0, addOrderToCustomer().getCustomer());
+        try {
+            em.getTransaction().begin();
+            em.persist(order1);
+            em.getTransaction().commit();
+            return order1;
+        } finally {
+            em.close();
+        }
     }
 
     @Override
@@ -95,11 +103,11 @@ public class Facade implements FacadeInterface {
 
     @Override
     public List<Customer> getCustomers() {
-    EntityManager em = emf.createEntityManager();
-    
-    TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c", Customer.class);
-    List<Customer> result = query.getResultList();
+        EntityManager em = emf.createEntityManager();
+
+        TypedQuery<Customer> query = em.createQuery("SELECT c FROM Customer c", Customer.class);
+        List<Customer> result = query.getResultList();
         System.out.println(result);
-        return result;        
+        return result;
     }
 }

@@ -7,6 +7,7 @@ package main;
 
 import domain.Facade;
 import entity.Customer;
+import entity.Order;
 import javax.persistence.Persistence;
 
 /**
@@ -19,6 +20,7 @@ public class Main {
         
         //facade.createCustomer(new Customer());
         //facade.getCustomer(2);
-        facade.getCustomers();
+        //facade.getCustomers();
+        facade.createOrder(new Order());
     }
 }
