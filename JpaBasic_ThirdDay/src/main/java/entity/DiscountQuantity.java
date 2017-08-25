@@ -6,6 +6,7 @@
 package entity;
 
 import java.io.Serializable;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,8 @@ import javax.persistence.Id;
  *
  * @author Menja
  */
-@Entity
+@Entity(name = "DiscountQuantity")
+@DiscriminatorValue("DiscountQuantity")
 public class DiscountQuantity extends DiscountType implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,14 +35,15 @@ public class DiscountQuantity extends DiscountType implements Serializable {
 
     int quantityForDiscount = 3;
     double discount = 0.2;
+
     @Override
-    public double calcDiscount(double priceItem, int quantity){
+    public double calcDiscount(double priceItem, int quantity) {
         return quantity >= quantityForDiscount ? priceItem * quantity * discount : 0;
     }
-    
+
     @Override
     public String toString() {
         return "entity.DiscountQuantity[ id=" + id + " ]";
     }
-    
+
 }

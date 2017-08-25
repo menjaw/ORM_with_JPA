@@ -6,6 +6,7 @@
 package entity;
 
 import java.io.Serializable;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +19,7 @@ import javax.persistence.InheritanceType;
  * @author Menja
  */
 @Entity
+@DiscriminatorColumn(name = "MyName")//changes DTYPE name in DB
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class DiscountType implements Serializable {
 
