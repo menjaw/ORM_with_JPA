@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entity.ItemType</class>
     <class>entity.OrderLine</class>
+    <class>entity.Customer</class>
     <class>entity.Order</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>

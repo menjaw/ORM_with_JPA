@@ -20,7 +20,7 @@ public class OrderLine implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     public Integer getId() {
@@ -31,25 +31,16 @@ public class OrderLine implements Serializable {
         this.id = id;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
+   private int quantity;
+
+    public int getQuantity() {
+        return quantity;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof OrderLine)) {
-            return false;
-        }
-        OrderLine other = (OrderLine) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
+   
 
     @Override
     public String toString() {
