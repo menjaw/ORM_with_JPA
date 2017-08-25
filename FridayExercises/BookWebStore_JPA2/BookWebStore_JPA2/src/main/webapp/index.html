@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>General Part</h1>
+        <h2>Questions</h2>
+        <ol>
+            <li>Describe how we have handled persistence in the last three semesters. The considerations should include all relevant layers. File IO, Relational Databases, the browsers local storage and cookies on the browser.</li>
+            <li>xplain the JPA strategy for handling Object Relational Mapping and important classes/annotations involved</li>
+            <li>Explain how Inheritance in an OO language can be mapped to tables in a relational database</li>
+            <li>Explain (at least two) JPA-strategies for Inheritance Mapping</li>
+        </ol>
+
+        <h2>Answers</h2>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+
+        <h3>Reflections</h3>
+        <ul>
+            <li><p>I have decided to use Single_Table strategy.</p></li>
+            <li><p>This approach(tilgang) makes polymorphic queries very efficient(effektive) and provides(giver) the best performance(ydeevne).</p></li>
+            <li><p>That is because all the attributes are stored in the same database table.</p></li>
+            <li><p>The drawbacks are that the table will get a lot of empty fields [null], because you can't use [not null]</p></li>
+            <li>Single_Table strategy will fail if you add the @Column(nullable = false)to the downloadUrl field, because you can use not null</li>
+        </ul>
+    </body>
+</html>
