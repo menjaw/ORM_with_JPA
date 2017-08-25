@@ -23,7 +23,7 @@ public class Facade implements FacadeInterface {
 
     private EntityManagerFactory emf;
 
-    //CONSTRUCTOR
+    //CONSTRUCTORS
     public Facade() {
     }
 
@@ -63,7 +63,7 @@ public class Facade implements FacadeInterface {
         }
     }
 
-    @Override
+    @Override//getBook
     public Ebook readBook(int id) {
         EntityManager em = emf.createEntityManager();
 

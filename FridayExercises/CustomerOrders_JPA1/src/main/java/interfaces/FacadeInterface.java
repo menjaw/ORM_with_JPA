@@ -5,18 +5,35 @@
  */
 package interfaces;
 
+import entity.Customer;
+import entity.Order;
+import java.util.List;
+
 /**
  *
  * @author Menja
  */
 public interface FacadeInterface {
-//      Create a Customer
-//	Find a Customer
-//	Get all Customers
-//	Create an Order 
-//	Add an Order to a Customer
-//	Find an Order
-//	Create an ItemType 
-//	Create an OrderLine
+
+    //Create a Customer
+    public Customer createCustomer(Customer customer);
+
+    //Find a Customer
+    public Customer getCustomer(int id);
+
+    //Get all Customers
+    public List<Customer> getCustomers();
+
+    //Create an Order 
+    public Order createOrder();
+
+    //Add an Order to a Customer
+    public Order addOrderToCustomer();
+
+    //Find an Order
+    public Order getOrder();
+    
+    //Create an ItemType 
+    //Create an OrderLine
 
 }

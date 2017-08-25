@@ -5,10 +5,20 @@
  */
 package main;
 
+import domain.Facade;
+import entity.Customer;
+import javax.persistence.Persistence;
+
 /**
  *
  * @author Menja
  */
 public class Main {
-    
+    public static void main(String[] args) {
+        Facade facade = new Facade(Persistence.createEntityManagerFactory("pu"));
+        
+        //facade.createCustomer(new Customer());
+        //facade.getCustomer(2);
+        facade.getCustomers();
+    }
 }
